@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante - Pedidos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Saboriarte</h1>
+    </header>
+
+    <main id="mainContent">
+        <section id="menu">
+            <h2>Menú</h2>
+            <div class="menu-category">
+                <h3>COMIDAS</h3>
+                <div class="sub-category">
+                    <h4>Menú del Día</h4>
+                    <table>
+                        <tr>
+                            <td>Plato principal + sopa + postre</td>
+                            <td>$6000</td>
+                            <td><button onclick="addItem('Menú del Día', 6000)">+</button></td>
+                            <td><span id="quantity-Menú del Día">0</span></td>
+                            <td><button onclick="removeItem('Menú del Día', 6000)">-</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="sub-category">
+                    <h4>Platos</h4>
+                    <table>
+                        <tr><td>Milanesa</td><td>$6000</td><td><button onclick="addItem('Milanesa', 6000)">+</button></td><td><span id="quantity-Milanesa">0</span></td><td><button onclick="removeItem('Milanesa', 6000)">-</button></td></tr>
+                        <tr><td>Milanesa Napolitana</td><td>$6000</td><td><button onclick="addItem('Milanesa Napolitana', 6000)">+</button></td><td><span id="quantity-Milanesa Napolitana">0</span></td><td><button onclick="removeItem('Milanesa Napolitana', 6000)">-</button></td></tr>
+                        <tr><td>Milanesa a Caballo</td><td>$6000</td><td><button onclick="addItem('Milanesa a Caballo', 6000)">+</button></td><td><span id="quantity-Milanesa a Caballo">0</span></td><td><button onclick="removeItem('Milanesa a Caballo', 6000)">-</button></td></tr>
+                        <tr><td>Picante de Mondongo</td><td>$6000</td><td><button onclick="addItem('Picante de Mondongo', 6000)">+</button></td><td><span id="quantity-Picante de Mondongo">0</span></td><td><button onclick="removeItem('Picante de Mondongo', 6000)">-</button></td></tr>
+                        <tr><td>Fideos Caseros</td><td>$6000</td><td><button onclick="addItem('Fideos Caseros', 6000)">+</button></td><td><span id="quantity-Fideos Caseros">0</span></td><td><button onclick="removeItem('Fideos Caseros', 6000)">-</button></td></tr>
+                        <tr><td>Sopita</td><td>$6000</td><td><button onclick="addItem('Sopita', 6000)">+</button></td><td><span id="quantity-Sopita">0</span></td><td><button onclick="removeItem('Sopita', 6000)">-</button></td></tr>
+                    </table>
+                </div>
+                <div class="sub-category">
+                    <h4>Pizzas</h4>
+                    <table>
+                        <tr><td>Pizza Común</td><td>$6000</td><td><button onclick="addItem('Pizza Común', 6000)">+</button></td><td><span id="quantity-Pizza Común">0</span></td><td><button onclick="removeItem('Pizza Común', 6000)">-</button></td></tr>
+                        <tr><td>Pizza Especial</td><td>$6000</td><td><button onclick="addItem('Pizza Especial', 6000)">+</button></td><td><span id="quantity-Pizza Especial">0</span></td><td><button onclick="removeItem('Pizza Especial', 6000)">-</button></td></tr>
+                        <tr><td>Pizza Super Especial</td><td>$6000</td><td><button onclick="addItem('Pizza Super Especial', 6000)">+</button></td><td><span id="quantity-Pizza Super Especial">0</span></td><td><button onclick="removeItem('Pizza Super Especial', 6000)">-</button></td></tr>
+                        <tr><td>Pizza Fugazzeta</td><td>$6000</td><td><button onclick="addItem('Pizza Fugazzeta', 6000)">+</button></td><td><span id="quantity-Pizza Fugazzeta">0</span></td><td><button onclick="removeItem('Pizza Fugazzeta', 6000)">-</button></td></tr>
+                        <tr><td>Pizza Napolitana</td><td>$6000</td><td><button onclick="addItem('Pizza Napolitana', 6000)">+</button></td><td><span id="quantity-Pizza Napolitana">0</span></td><td><button onclick="removeItem('Pizza Napolitana', 6000)">-</button></td></tr>
+                    </table>
+                </div>
+                <div class="sub-category">
+                    <h4>Empanadas</h4>
+                    <table>
+                        <tr><td>Empanadas de Carne</td><td>$6000</td><td><button onclick="addItem('Empanadas de Carne', 6000)">+</button></td><td><span id="quantity-Empanadas de Carne">0</span></td><td><button onclick="removeItem('Empanadas de Carne', 6000)">-</button></td></tr>
+                        <tr><td>Empanadas de Pollo</td><td>$6000</td><td><button onclick="addItem('Empanadas de Pollo', 6000)">+</button></td><td><span id="quantity-Empanadas de Pollo">0</span></td><td><button onclick="removeItem('Empanadas de Pollo', 6000)">-</button></td></tr>
+                        <tr><td>Empanadas Árabes</td><td>$6000</td><td><button onclick="addItem('Empanadas Árabes', 6000)">+</button></td><td><span id="quantity-Empanadas Árabes">0</span></td><td><button onclick="removeItem('Empanadas Árabes', 6000)">-</button></td></tr>
+                    </table>
+                </div>
+                <div class="sub-category">
+                    <h4>Sándwiches</h4>
+                    <table>
+                        <tr><td>Milanesa s/ Papas</td><td>$6000</td><td><button onclick="addItem('Milanesa s/ Papas', 6000)">+</button></td><td><span id="quantity-Milanesa s/ Papas">0</span></td><td><button onclick="removeItem('Milanesa s/ Papas', 6000)">-</button></td></tr>
+                        <tr><td>Milanesa c/ Papas</td><td>$6000</td><td><button onclick="addItem('Milanesa c/ Papas', 6000)">+</button></td><td><span id="quantity-Milanesa c/ Papas">0</span></td><td><button onclick="removeItem('Milanesa c/ Papas', 6000)">-</button></td></tr>
+                        <tr><td>Lomito s/ Papas</td><td>$6000</td><td><button onclick="addItem('Lomito s/ Papas', 6000)">+</button></td><td><span id="quantity-Lomito s/ Papas">0</span></td><td><button onclick="removeItem('Lomito s/ Papas', 6000)">-</button></td></tr>
+                        <tr><td>Lomito c/ Papas</td><td>$6000</td><td><button onclick="addItem('Lomito c/ Papas', 6000)">+</button></td><td><span id="quantity-Lomito c/ Papas">0</span></td><td><button onclick="removeItem('Lomito c/ Papas', 6000)">-</button></td></tr>
+                        <tr><td>Hamburguesa s/ Papas</td><td>$6000</td><td><button onclick="addItem('Hamburguesa s/ Papas', 6000)">+</button></td><td><span id="quantity-Hamburguesa s/ Papas">0</span></td><td><button onclick="removeItem('Hamburguesa s/ Papas', 6000)">-</button></td></tr>
+                        <tr><td>Hamburguesa c/ Papas</td><td>$6000</td><td><button onclick="addItem('Hamburguesa c/ Papas', 6000)">+</button></td><td><span id="quantity-Hamburguesa c/ Papas">0</span></td><td><button onclick="removeItem('Hamburguesa c/ Papas', 6000)">-</button></td></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>BEBIDAS</h3>
+                <div class="sub-category">
+                    <h4>BEBIDAS SIN ALCOHOL</h4>
+                    <table>
+                        <tr><td>1lt. Coca Cola, Fanta, Sprite</td><td>$6000</td><td><button onclick="addItem('1lt. Coca Cola, Fanta, Sprite', 6000)">+</button></td><td><span id="quantity-1lt. Coca Cola, Fanta, Sprite">0</span></td><td><button onclick="removeItem('1lt. Coca Cola, Fanta, Sprite', 6000)">-</button></td></tr>
+                        <tr><td>1 ½ lt. Coca Cola, Fanta, Sprite</td><td>$6000</td><td><button onclick="addItem('1 ½ lt. Coca Cola, Fanta, Sprite', 6000)">+</button></td><td><span id="quantity-1 ½ lt. Coca Cola, Fanta, Sprite">0</span></td><td><button onclick="removeItem('1 ½ lt. Coca Cola, Fanta, Sprite', 6000)">-</button></td></tr>
+                        <tr><td>2lt. Coca Cola, Fanta, Sprite</td><td>$6000</td><td><button onclick="addItem('2lt. Coca Cola, Fanta, Sprite', 6000)">+</button></td><td><span id="quantity-2lt. Coca Cola, Fanta, Sprite">0</span></td><td><button onclick="removeItem('2lt. Coca Cola, Fanta, Sprite', 6000)">-</button></td></tr>
+                        <tr><td>1lt. Marinaro</td><td>$6000</td><td><button onclick="addItem('1lt. Marinaro', 6000)">+</button></td><td><span id="quantity-1lt. Marinaro">0</span></td><td><button onclick="removeItem('1lt. Marinaro', 6000)">-</button></td></tr>
+                        <tr><td>500ml. Agua Saborizada</td><td>$6000</td><td><button onclick="addItem('500ml. Agua Saborizada', 6000)">+</button></td><td><span id="quantity-500ml. Agua Saborizada">0</span></td><td><button onclick="removeItem('500ml. Agua Saborizada', 6000)">-</button></td></tr>
+                        <tr><td>1 ½ lt. Agua Saborizada</td><td>$6000</td><td><button onclick="addItem('1 ½ lt. Agua Saborizada', 6000)">+</button></td><td><span id="quantity-1 ½ lt. Agua Saborizada">0</span></td><td><button onclick="removeItem('1 ½ lt. Agua Saborizada', 6000)">-</button></td></tr>
+                    </table>
+                </div>
+                <div class="sub-category">
+                    <h4>BEBIDAS ALCOHOLICAS</h4>
+                    <table>
+                        <tr><td>Cortado (1 vaso)</td><td>$6000</td><td><button onclick="addItem('Cortado (1 vaso)', 6000)">+</button></td><td><span id="quantity-Cortado (1 vaso)">0</span></td><td><button onclick="removeItem('Cortado (1 vaso)', 6000)">-</button></td></tr>
+                        <tr><td>¼ vino</td><td>$6000</td><td><button onclick="addItem('¼ vino', 6000)">+</button></td><td><span id="quantity-¼ vino">0</span></td><td><button onclick="removeItem('¼ vino', 6000)">-</button></td></tr>
+                        <tr><td>½ vino</td><td>$6000</td><td><button onclick="addItem('½ vino', 6000)">+</button></td><td><span id="quantity-½ vino">0</span></td><td><button onclick="removeItem('½ vino', 6000)">-</button></td></tr>
+                        <tr><td>750ml. Michel Torino</td><td>$6000</td><td><button onclick="addItem('750ml. Michel Torino', 6000)">+</button></td><td><span id="quantity-750ml. Michel Torino">0</span></td><td><button onclick="removeItem('750ml. Michel Torino', 6000)">-</button></td></tr>
+                        <tr><td>1lt. Toro</td><td>$6000</td><td><button onclick="addItem('1lt. Toro', 6000)">+</button></td><td><span id="quantity-1lt. Toro">0</span></td><td><button onclick="removeItem('1lt. Toro', 6000)">-</button></td></tr>
+                        <tr><td>1 ¼ lt. Canciller</td><td>$6000</td><td><button onclick="addItem('1 ¼ lt. Canciller', 6000)">+</button></td><td><span id="quantity-1 ¼ lt. Canciller">0</span></td><td><button onclick="removeItem('1 ¼ lt. Canciller', 6000)">-</button></td></tr>
+                        <tr><td>1 ¼ lt. Viña de Balbo</td><td>$6000</td><td><button onclick="addItem('1 ¼ lt. Viña de Balbo', 6000)">+</button></td><td><span id="quantity-1 ¼ lt. Viña de Balbo">0</span></td><td><button onclick="removeItem('1 ¼ lt. Viña de Balbo', 6000)">-</button></td></tr>
+                        <tr><td>Cerveza</td><td>$6000</td><td><button onclick="addItem('Cerveza', 6000)">+</button></td><td><span id="quantity-Cerveza">0</span></td><td><button onclick="removeItem('Cerveza', 6000)">-</button></td></tr>
+                    </table>
+                </div>
+                <div class="sub-category">
+                    <h4>SODAS</h4>
+                    <table>
+                        <tr><td>500ml. Soda Chica</td><td>$6000</td><td><button onclick="addItem('500ml. Soda Chica', 6000)">+</button></td><td><span id="quantity-500ml. Soda Chica">0</span></td><td><button onclick="removeItem('500ml. Soda Chica', 6000)">-</button></td></tr>
+                        <tr><td>1 ½ lt. Soda Grande</td><td>$6000</td><td><button onclick="addItem('1 ½ lt. Soda Grande', 6000)">+</button></td><td><span id="quantity-1 ½ lt. Soda Grande">0</span></td><td><button onclick="removeItem('1 ½ lt. Soda Grande', 6000)">-</button></td></tr>
+                        <tr><td>1lt. Marinaro</td><td>$6000</td><td><button onclick="addItem('1lt. Marinaro', 6000)">+</button></td><td><span id="quantity-1lt. Marinaro">0</span></td><td><button onclick="removeItem('1lt. Marinaro', 6000)">-</button></td></tr>
+                        <tr><td>Soda en Vaso</td><td>$6000</td><td><button onclick="addItem('Soda en Vaso', 6000)">+</button></td><td><span id="quantity-Soda en Vaso">0</span></td><td><button onclick="removeItem('Soda en Vaso', 6000)">-</button></td></tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <div id="cartContainer">
+            <button id="cartButton" onclick="toggleCart()">Carrito (<span id="cartCount">0</span>) - Total: $<span id="cartTotal">0</span></button>
+        </div>
+
+        <div id="cart" class="cart">
+            <h2>Tu Carrito</h2>
+            <div id="cartItems">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cantidad</th>
+                            <th>Item</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartItemsBody"></tbody>
+                </table>
+            </div>
+            <div id="total" class="total">Total: $0</div>
+            <label for="name">Nombre y Apellido:</label>
+            <input type="text" id="name" placeholder="Nombre" required>
+            <label for="address">Dirección:</label>
+            <input type="text" id="address" placeholder="Dirección" required>
+            <label for="paymentMethod">Método de Pago:</label>
+            <select id="paymentMethod" onchange="toggleAlias()">
+                <option value="efectivo">Efectivo</option>
+                <option value="transferencia">Transferencia</option>
+            </select>
+            <div id="aliasContainer" style="display: none;">
+                <p>Alias: <span id="alias">dariocancinos27.uala</span></p>
+                <button class="copy-button" onclick="copyAlias()">Copiar Alias</button>
+            </div>
+            <div class="button-container">
+                <button class="checkout-button" onclick="checkout()">Finalizar Compra</button>
+                <button class="back-button" onclick="toggleCart()">Volver al Menú</button>
+            </div>
+        </div>        
+    </main>
+
+    <div id="overlay" class="overlay"></div>
+
+    <footer>
+        <p>&copy; Realizado por Littletank</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
